@@ -98,4 +98,4 @@ $result = $db->query($query);
     <span id="stay" style="float: right;">CLOCK</span>
   </footer>
 
-</html>
+</html> 
