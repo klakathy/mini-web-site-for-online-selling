@@ -31,7 +31,7 @@
               <a href="#copyright" style="border-top: 2;">Copyright</a>
           </div>
         </div>
-        
+         
     <!--1-2 search function still on working-->
         <div class="topbarsearch">
           <form name="search_on_list" action="search.php" target="_blank" onsubmit="return search_working()" method="post">
