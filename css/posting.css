@@ -1,0 +1,106 @@
+/*create a post page*/
+
+/*form part*/
+  .two-col {
+      margin-left: auto;
+      margin-right: auto;
+      width: 75%; 
+      max-width: 1200px;
+      min-height: 600px; 
+      overflow-x: hidden;
+      background-color: rgba(100,100,100,0.2);
+      background-image: url(bg_peach.png);
+      background-blend-mode: screen; 
+      background-size: cover; 
+      text-align: left;
+      color: #85819A;
+      font-size: 16px; 
+      line-height: 30px;
+      letter-spacing: 1px;
+  }
+  
+  .two-col label {
+      display: block; 
+  }
+
+/* text part (left) */
+  .col1 input{
+    margin-left: 25px;
+    }
+  .col1 input[type=text]{
+    width:200px; 
+    height:35px;
+  }
+
+/* image part (right) */
+  #preshowinput label{
+    display: block;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    margin-bottom: 5px;
+  }
+  #preshowinput label span{
+    display: inline-block;
+    top: 0;
+    width: 190px;
+    height: 185px;
+    background-color: rgba(230,230,230,0.8);
+    background-image: url(add.png);
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: normal;
+    border:5px solid rgba(200,200,200,0.2);
+    border-radius: 20%; 
+  }
+  #preshowinput label input{
+    width: 200px;
+    height: 190px;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  #preshowinput label img{
+    max-width: 200px;
+    max-height: 200px;
+    opacity: 0.6;
+  }
+  #preshowinput input{
+    width: 2px;
+    height: 1px;
+    background-color: transparent;
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+
+
+
+
+/*******************************/
+  #preshowimage img{
+    max-width: 200px;
+    margin-top:3px;
+  }
+
+
+  .span_forbutton{
+    padding: 5 0px;
+  }
+
+  .span_forbutton:hover,
+  .span_forbutton1:hover{
+    background-color: rgb(130,180,255);
+  }
+
+  .span_forbutton1{
+    position: absolute;
+    bottom: 130px;
+    left: 75%;     
+    background-color: rgb(200,200,200);
+  }

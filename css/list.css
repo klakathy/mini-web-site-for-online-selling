@@ -1,0 +1,31 @@
+/*list page*/
+
+
+  .choice_list{
+    width: 70%; 
+    min-height: 600px; 
+    background-color: rgba(100,100,100,0.2);
+  }
+  .choice_list table{
+    width: 100%; line-height: 200%;padding:0 30px;
+  }
+
+  .choice_list table th,
+  .choice_list table tr:nth-child(even){
+    background-color: rgb(200,200,200);
+  }
+  .choice_list table td:nth-child(3){
+    text-align: right;
+  }
+  .choice_list table td:nth-child(1){
+    text-align: center;
+  }
+
+  .choice_list .btn_rightalign{
+    margin: 20px 10px 20px 70%;
+  }
+
+
+
+
+
