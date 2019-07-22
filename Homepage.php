@@ -122,7 +122,7 @@ session_start();
         <div class="choice_btn"style=>
           <a href="list_books.php" class="btn_rightalign" >more</a>
         </div>
-      </div>
+      </div> 
       <!--end--><div class="container-end"></div>
     </div>
 
