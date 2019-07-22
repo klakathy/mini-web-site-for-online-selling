@@ -1,0 +1,232 @@
+<html>
+  <head>
+    <title>JHU SSEP create post</title>
+    <link href="css/posting.css" type="text/css" rel="stylesheet"/>
+    <link href="css/homepage.css" type="text/css" rel="stylesheet"/>
+    <script type="text/JavaScript" src="js/mainmenu.js"></script>
+    <script type="text/JavaScript" src="js/time.js"></script>
+    <script type="text/javascript" src="js/posting.js"></script>
+  </head>
+  <body>
+  <!--1 top menu part-->
+    <!--logo--><img src="images/logo1.jpg" alt="image loading failure" id="topmenulogo" onmouseover="menu_show()" onclick="menu_show()" onmouseout="menu_close()" />
+    <div class="topbar">
+      <div class="topbar1">
+    <!--1-1 main menu-->
+        <div class="godown" onmouseover=  "menu_show()" onclick="menu_show()" onmouseout="menu_close()" >
+          
+          <button type="button" class="dropbtn" style="padding: 23 19px;z-index: 2;">
+            <img src="images/logo2.png" height="25"/>
+          </button>    
+         
+          <div id="main_menu" class="godown-menu">
+            <hr/><!--Home-->
+              <a href="Homepage.html" style="font-weight: 800;">HOME</a>
+            <hr/><!--Sale-->
+              <h3 style="padding-right: 5%;">&bull; &nbsp;Sale</h3>
+              <a href="list_housing.html">Housing/Apartment Rent</a>
+              <a href="list_automotive.html">Automotive</a>
+              <a href="list_books.html">Books</a>
+              <a href="list_appliance.html">Appliances/Electronics</a>
+            <hr/><!--want-->
+              <h3 style="padding-right: 5%;">&bull; &nbsp;Want</h3>
+              <a href="list_want.html">Want Lists</a>
+              <a href="posting.html">Creat posts</a>
+            <hr/><!--about/contact-->
+              <span class="span_a" onclick="opencontact(1)">About Us</span>
+              <span class="span_a" onclick="opencontact(2)">Contact Us</span>
+            <hr/><!--copyright-->
+              <a href="#copyright" style="border-top: 2;">Copyright</a>
+          </div>
+        </div>
+        
+    <!--1-2 search function still on working-->
+        <div class="topbarsearch">
+          <form name="search_on_list" target="_blank" onsubmit="return search_working()">
+            <select name="select_search_list">
+              <option value="1" selected="selected">Housing</option>
+              <option value="2">Automoive</option>
+              <option value="3">Books</option>
+              <option value="4">Appliances</option>
+              <option value="5">Want</option>
+            </select>
+            <input type="text" name="search_text" placeholder="Search something.."/>
+            <input type="submit" name="search_submit" value=""/>
+          </form>
+        </div>
+
+    <!--1-3 user info & contact icon-->
+        <div class="topbaricon" style="">
+          <a href="ABC.html" target="_blank" style="float: left;">
+            <img src="images/photo_ABC.jpg" border="3" style="height: 47px;margin-top:8px;" alt="user: ABC" title="go to ABC's page" />
+          </a>
+          <a href="index.html">
+            <img src="images/logout.png" border="3" alt="Log Out" title="Log out and return to login page" />
+          </a>  
+          <span class="span_a" onclick="opencontact(2)" style="float: right;">
+            <img src="images/contact.png" alt="contact" title="contact us" border="3" style="height: 33px; padding: 3 3px;" />
+          </span> 
+        </div>    
+      </div><!--for topbar1-->
+      
+    <!--1-4 change color-->
+      <div class="topbar2">
+      <!--default showing colors + random (left)-->
+        <form name="colorform" target="iframe_nospace" onsubmit="remember_c()">
+          <span style="display: inline-block;float: left; padding: 7 40 7 30px;">change page color here </span>
+              <script type="text/javascript">
+                wcolor(255,255,255);
+                wcolor(172,194,232);
+                wcolor(130,180,255);
+                wcolor(81,122,167);
+                wcolor(19,47,88);
+                wcolor(55,71,159); 
+                wcolor(25,200,170);          
+              </script>
+            <!--this is the default color-->
+          <label class="color_container">
+            <input type="radio" name="color_page" value="9"checked="checked" onclick="change_c(40,40,40)" />
+            <span class="color_mark" style="background-color:rgb(40,40,40);"></span>
+          </label>
+            <!--this is random color part-->
+          <input type="button" name="color_random" value="random" style="float: left;" onclick="change_c_random()"/>           
+          <label class="color_container">
+            <input type="radio" name="color_page" value="10" />
+            <span id="color_r_and_c" class="color_mark" style="background-color:rgb(40,40,40);"></span>
+            <input type="color" name="inputcolor_random" value="#000000" oninput="change_c_inputcolor(this)" />
+          </label>
+
+      <!--customize part (right)-->
+          <div style="position: absolute; right: 15px;top: 0;" >
+            customize R<input type="text" name="cr0" maxlength="3" />
+            G<input type="text" name="cg0" maxlength="3" />
+            B<input type="text" name="cb0" maxlength="3" />
+            <input type="button" name="color_submit" value="OK" style="margin-left:0;" onclick="change_c_inputtext(cr0.value,cg0.value,cb0.value)"/>     
+            <input type="submit" name="color_default_set" value="Remember" style="padding: 2px;"/>
+
+            <!--iframe used for no changing submit of form(color/contact us)--><iframe name="iframe_nospace" src="#" style="width: 0px;height: 0px;"></iframe>         
+          </div>
+        </form>      
+      </div><!--for topbar2-->
+    </div><!--for topbar-->
+ 
+  <!--2 cover image part-->
+    <div id="top" class="container" style="margin-top: 30px;">
+      <!--border--><div style="height: 40px;"></div>
+      <img src="images/jhu02.jpg" alt="image loading failure" style="width: 100%" />
+      <div class="text-onimage" style="width: 70%;height: 70%;left: 15%;top: 18%; margin-right: auto;text-align: center;padding: 0;">
+        <h1 style="font-size: 350%;font-weight: 800;position: absolute;bottom: 50%;right: 50%;margin-right: -90px; margin-bottom: -45px;">POST</h1>       
+      </div>
+      <div class="container-end" style="height: 30px;"></div>
+    </div>
+    
+  <!--3 list part-->
+    <div id="description" class="container">
+      <!--border--><div style="height: 40px;"></div>
+      <div align="center" style="background-color: white; padding: 30 30 30 30px;">
+        <h1>Welcome to the posting page</h1>
+      </div>
+      <!--start--><div class="container-start"></div>
+      <div style="background-color: white;width: 100%;padding: 10 10 10 10px;text-align: center;">
+        <form name="Form" action="sample.php" method="post" enctype="multipart/form-data" onsubmit="return submitpost()">
+          <div class="two-col" style="padding: 50px;">     
+          <!-- 3.1 text part (left)-->    
+            <div class="col1" style="width: 60%;float: left;">
+                <label>YOUR NAME *</label>
+                <input type="radio" name="showname" value="1" checked="checked" />Show your user name
+                <span style="display: inline-block;"><input type="radio" name="showname" value="0" /> Anonymous</span>                
+              <br/><br/>    
+                <label>YOU  ARE A</label>
+                <input type="radio" name="sell" value="1" checked="checked" />Seller
+                <input type="radio" name="sell" value="0" /> Buyer
+              <br/><br/> 
+                <label>TITLE *</label>
+                <input type="text" name="itemtitle" required="required" style="width: 90%;" />              <br/><br/> 
+                <label>YOUR EMAIL *</label>
+                <input type="text" name="itememail" required="required"/>              
+                <label>&nbsp&nbsp&nbsp your phone number </label>
+                <input type="text" name="itemphone"/>
+                  <label>&nbsp&nbsp&nbsp add more contact information </label>
+                  <textarea name="c-contact" rows="5" style="width: 95%;margin-left: 25px;"></textarea>
+              <br/><br/> 
+                <label>DESIRED SALE / PURCHASE PRICE *</label>
+                <input type="text" name="itemprice" required="required"/>
+                  <label>&nbsp&nbsp&nbsp add more price information </label>
+                  <textarea name="c-price" rows="5" style="width: 95%;margin-left: 25px;"></textarea>
+              <br/><br/> 
+                <label>DESIRED PLACE *</label>
+                <input type="radio" name="itemplace" value="1" checked="checked" />DC
+                <input type="radio" name="itemplace" value="2" /> Baltimore
+                <span style="display: inline-block;">
+                  <input type="radio" name="itemplace" value="3" /> Other
+                  <input type="text" name="otherplace" placeholder="Enter here" style="width: 150px;margin-left: 0px;" />
+                </span>
+                
+                  <label>&nbsp&nbsp&nbsp add more place information </label>
+                  <textarea name="c-place" rows="5" style="width: 95%;margin-left: 25px;"></textarea>
+              <br/><br/> 
+                <label for="your-post">YOUR POST DESCRIPTION</label>
+                <textarea name="itemmessage" id="mess1" rows="2" style="width: 95%; margin-left: 25px; min-height: 200px;" onkeyup="text_extend(this,8)"></textarea>
+            </div>
+
+          <!-- 3.2 image part (right)-->
+            <div class="col2" style="width: 35%;float: right;">
+              <label style="margin-bottom: 0;">YOUR PICTURES<br/></label>
+              <span style=" text-align: right;line-height: 15px;margin-bottom: 20px;width: 100%;display: block;font-size-adjust: all;" >* at least one is required<br/>multiple selection allowed</span>
+                             
+              <div id="preshowimage"></div>
+              <div id="preshowinput"><label><span></span><input type="file" name="picture[]" accept="image/*" multiple oninput="showimg(this)" /></label></div> 
+
+              <span class="span_forbutton1"><input type="reset" value="reset for all" style="font-size: 10px; color: white; border:none;background-color: transparent; cursor:pointer;padding: 7 10px;" onclick="text_shrink()" /></span>
+            </div>
+          </div>
+          <div style="width: 100%;">
+            <span class="span_forbutton"><input type="submit" value="POST" style="font-size: 16px; letter-spacing: 1px; margin-top: 30px;padding: 5 10px;border:none;color:white;background-color: rgba(130,180,255,0.8);cursor:pointer;"/> </span>
+          </div>
+        </form>
+      </div>
+      <!--end--><div class="container-end"></div>
+    </div>
+
+  <!--4 contact div-->
+    <div id="window0" class="window0">
+      <div class="window0-content" align="left">
+        <span class="close" onclick="closecontact()">&times;</span>
+        <section id="about_section">
+          <h2>About Us</h2>
+          <p style="font-size: 100%">
+            This web site is designed by Yiran Gao, Zixiao Guo, Minqiang Liang, Xiaoyue Niu.
+            <br/><br/>This project is a resale website, named JHU Student Second-hand Exchange Platform, particularly designed for JHU students. It provides platforms for students to sell and buy second-hand things from each other. This website is launched as a descendent of the university site, that only students or alumni from JHU registered in our database are served as customers. We do not sell or buy any products, but users are able to publish the items they no longer use or they want to buy in JHU SSEP. No online transactions will be made via the platform, users are able to contact for further information per methods provided by the publisher, and are encouraged to check the items and finish the transaction by themselves.
+          </p>
+        </section>
+        <section id="contact_section">
+          <h2>Contact Form</h2>
+          <form name="form_contact" target="iframe_nospace" onsubmit="return submitcontact()">
+            <h3>Name<sup>*</sup><input type="text" size="40" name="name_contact" id="name_contact" required="required"/></h3>
+            <h3>Email<sup>*</sup><input type="text" size="40" name="email_contact" id="email_contact" required="required"/></h3>
+            <h3>Phone (Optional) <input type="text"size="21"  name="phone_contact" id="phone_contact" </h3>
+            <h3>Message<sup>*</sup></h3>
+            <br/><textarea name="message_contact" style="width: 90%;" rows="10" required="required"></textarea>
+            <br/><input type="submit" value="Submit"/>
+          </form>
+        </section>        
+      </div>
+    </div>
+
+  <!--5 go up menu-->
+    <div class="goup">
+      <button type="button" class="dropbtn"><a href="#top"><img src="images/goup.png" alt="TOP" height="40" width="40"/><br/>TOP</a></button>
+      <div class="goup-menu">
+        <a href="#description" style="padding: 10 10px;">Post</a>
+        <a href="#copyright" style="padding: 10 10px;">Submit</a>
+      </div>
+    </div>  
+
+  <footer id="copyright"align="center" style="padding: 10 20 10 20px; min-width: 700px;overflow-x: hidden;">
+    <span id="de" style="float: left;">CLOCK</span>
+    &copy:DC Student Secondhand Exchange Platform 2019
+    <span id="stay" style="float: right;">CLOCK</span>
+  </footer>  
+
+  </body>
+</html>

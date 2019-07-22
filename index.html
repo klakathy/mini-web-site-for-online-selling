@@ -1,0 +1,138 @@
+
+<html>
+<head>
+	<title>Log In</title>
+  <script type="text/JavaScript" src="js/time.js"></script>
+  <script typp="text/JavaScript" src="js/mainmenu.js"></script>
+  <script type="text/JavaScript" src="js/loginformvalidation.js"></script>
+	<style type="text/css">
+		body{
+			background-image: url(css/bg_market.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-color: rgba(255,255,255,0.85);
+			background-blend-mode: soft-light;
+		}
+		.logbox{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -190px;
+      margin-top: -270px;
+      border-radius: 4px;
+      background-color: white;
+      width: 300px;
+      height: 500px;
+      box-shadow: 0 2px 10px #999;
+      padding: 40 40px;
+    }
+    .span_login{
+      position:absolute;
+      display: block;
+      font-size: 14px;
+      color: rgb(180,180,180);       
+    }
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+    }
+    form input[type=reset],
+    form input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    form input[type=reset]:hover,
+    form input[type=submit]:hover {
+      opacity: 0.8;
+    }
+    
+	</style>
+</head>
+
+<body>
+	<div style="display: block; width: 90%; height:90%;min-width: 600px;min-height:500px;background-color: rgba(255,255,255,0.2);margin: 4% auto 0 auto;">
+		<div style="position: absolute; display: block; left: 60px; ">
+      <img src="images/logo2.png" style="width: 150px;opacity: 0.7;" />
+			
+		</div>
+		<div class="logbox" >			
+      
+      <div>
+        <form action="logincheck.php" name="loginform" id="login_form" onsubmit="return logincheck()">
+        <div class="imgcontainer" style="text-align: center;">
+          <img src="images/photo_ABC.jpg" alt="image loading failure" style="width: 130px;" />
+        </div>
+
+          <label><b>User Email</b></label>
+          <input type="text" placeholder="Enter Useremail" name="loginname"  required="required">
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="loginpass" required="required">        
+          <label style="float: right;"><input type="checkbox" checked="checked" name="remember"> Remember me</label>   
+          <input type="submit" name="loginsubmit" value="Login" onclick="submit_login()" />
+          <input type="reset" name="Cancel" value="Cancel" />   
+        </form> 
+
+        <form action="logincheck.php" name="signupform" id="signup_form" onsubmit="return signupcheck()" style="display: none;padding-top: 70px;">
+          <label><b>User Email*</b></label>
+          <input type="text" placeholder="Enter Useremail" name="loginname"  required="required">
+          <label><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="username">
+          <label for="psw"><b>Password*</b></label>
+          <input type="password" placeholder="Enter Password" name="loginpass" required="required">
+
+          <input type="submit" name="loginsubmit" value="Sign Up" onclick="submit_signup" />
+          <input type="reset" name="Cancel" value="Cancel" />   
+        </form>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1;padding: 10 10px;margin-top: 30px;">
+        <span style="float: right;" >Forgot 
+          <a href="#" onclick="forgotp()"> password?</a>
+        </span>
+        <span onclick="login(this)">Sign up</span>
+      </div>
+      
+
+      <script type="text/javascript">
+        function forgotp(){
+          alert("Please keep trying until you remember it");
+        }
+        function login(a){
+          x=a.innerText;
+          if(x=="Sign up"){
+            login_form.style.display="none";
+            signup_form.style.display="block";
+            a.innerText="Log in";
+          }else {
+            signup_form.style.display="none";
+            login_form.style.display="block";
+            a.innerText="Sign up";
+          }
+        }
+        function logincheck(){
+          return true;
+        }
+        function signupcheck(){
+          x=document.signupform.loginname.value;
+          y=document.signupform.username.value;
+          if(y=="")document.signupform.username.value=x;
+          return true;
+        }
+
+      </script>
+      
+
+		</div>
+    <span id="de" class="span_login" style="bottom: 5%;left: 80px;">CLOCK</span>
+    <span class="span_login" style="bottom: 5%;left: 257px;">|</span>
+    <span id="stay" class="span_login" style="bottom: 5%;left: 280px;">CLOCK</span>
+    <span class="span_login" style="bottom: 5%; right: 80px;">&copy:DC Student Secondhand Exchange Platform 2019</span>
+	</div>
+</body>
+</html>
