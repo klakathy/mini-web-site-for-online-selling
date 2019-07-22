@@ -31,7 +31,7 @@ $tmpid=str_pad($tmpid,3,"0",STR_PAD_LEFT);
 $tmpdate=date_create($date);
 $tmpdate=date_format($tmpdate, "ymd");
 $itemid=$class.$tmpdate.$tmpid;
-
+ 
 $pics="";
 $i=0;
 $picnum=0;
