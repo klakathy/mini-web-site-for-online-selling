@@ -25,4 +25,4 @@
 	else $status= "my likeitem";
 	echo $status;
 	
-?>
+?> 
