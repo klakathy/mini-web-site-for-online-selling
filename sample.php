@@ -32,7 +32,7 @@ if($itemid=$_GET['item']){
   }
 }else {require_once 'postingvalue.php';}
 $owner="anonymous";
-
+ 
 if($showname==1){
   $qname="SELECT * FROM userlist WHERE id = '$ownerid'";
   if($rname=$db->query($qname)){
