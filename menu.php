@@ -109,7 +109,7 @@
         <section id="about_section">
           <h2>About Us</h2>
           <p style="font-size: 100%">
-            This web site is designed by Yiran Gao, Zixiao Guo, Minqiang Liang, Xiaoyue Niu.
+            This web site is designed for a course.
             <br/><br/>This project is a resale website, named JHU Student Second-hand Exchange Platform, particularly designed for JHU students. It provides platforms for students to sell and buy second-hand things from each other. This website is launched as a descendent of the university site, that only students or alumni from JHU registered in our database are served as customers. We do not sell or buy any products, but users are able to publish the items they no longer use or they want to buy in JHU SSEP. No online transactions will be made via the platform, users are able to contact for further information per methods provided by the publisher, and are encouraged to check the items and finish the transaction by themselves.
           </p>
         </section>
