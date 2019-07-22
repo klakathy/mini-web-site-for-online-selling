@@ -35,7 +35,7 @@ $result=$conn->query($query);
       <div class="container_content">
         <div class="choice_btn choice_list" > 
           <table id="myTable">
-            <tr> 
+            <tr>  
               <th>Date</th>
               <th>Description</th>
               <th>Price</th>
