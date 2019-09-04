@@ -15,11 +15,11 @@ The website can perform successfully through popular web browsers, Chrome, Firef
 ### Testing data
 The website is developed based on MySQL, sample data format can be seen in file [seep_sample.sql](seep_sample.sql). It currently has data of four simulated product for purchase or sell. Other testing data of the project are simulated randomly and are not stored in the database. 
 <br/>
-
-
+Key informations needed for the website contain the product description for each item posted for selling or wanting, users' account information and their saved favorite products, as well as the data recording new posted products. Here tables `itemlist`, `userlist`, `likelist`, `tmplist` are employed to utilized to serve the needs respectively.  
 ![er model](readme_img/er1.png)  
 Change of SQL platform may result to invalid SQL data format or failure of query functions on the website.
 <br/><br/>
+
 ### Resources  
   - Environment: HTML, PHP  
   - SQL: MySQL  
@@ -30,6 +30,7 @@ Change of SQL platform may result to invalid SQL data format or failure of query
     - Download `.php`, `.html` files, and `css`, `js`, `images`, `iii` folders in targeting folder supporting internet information services.  
     <br/>
   - Architecture Overview  
+    PHP is used for backend running.  
     ![code structure](readme_img/structure1.png)  
 
 
@@ -40,32 +41,36 @@ The website focus on building platform severing for both sides of buyers and sel
 <br/>
 
 ## Login page
-For testing purpose, this step can be omitted by mannually typing homepage address, if no sql is setted.  
-![login](readme_img/login.png)  
+*For testing purpose, this step can be omitted by mannually typing homepage address, if no sql is setted.*  
+![login](readme_img/login1.png)  
 <br/>
 
-## user page:
-![user](readme_img/user.png)  
-<br/>
-
-## Product webpages:
-![website structure](readme_img/structure2.png)  
+## User profile page:
+![user](readme_img/user1.png)  
+Record users' favorites, posts and wants.  
 <br/>
 
 ## Homepage:
-![home](readme_img/home.png)  
+![home](readme_img/home1.png)  
+The website allows users to change theme color by selecting or defining the color under top bar.  
 <br/>
 
 ## List page:
-![search](readme_img/search.png)  
+![search](readme_img/search1.png)  
 <br/>
 
 ## item page:
-![item](readme_img/item.png)  
+![item](readme_img/item1.png)  
+In each product's page, a sign indicating adding to favorites or already saved is provided.
 <br/>
 
 ## post page:
-![post](readme_img/post.png)  
+![post](readme_img/post1.png)  
+When posting an item, users can add or delete multiple pictures to describe the product. After posting successfully, the content will not show in the website until it is reviewed. However, a sample page displaying the stored posted data will appear.
+<br/>
+
+- Overview of the product webpages  
+  ![website structure](readme_img/structure2.png)  
 <br/><br/>
 
 ## Documentation
