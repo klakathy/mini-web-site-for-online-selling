@@ -30,7 +30,7 @@ Change of SQL platform may result to invalid SQL data format or failure of query
     - Download `.php`, `.html` files, and `css`, `js`, `images`, `iii` folders in targeting folder supporting internet information services.  
     <br/>
   - Architecture Overview  
-  ![code structure](readme_img/structure1.png)  
+    ![code structure](readme_img/structure1.png)  
 
 
 ## Features
