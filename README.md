@@ -1,7 +1,8 @@
 # Online selling website
 *A online-selling platform for second-hand items for students based on PHP and MySQL.*  
+<br/>
 ![add icon/screenshot](images/logo1.jpg)  
-<br/><br/>
+<br/>
 
 This repository includes a website designed in purpose for JHU students as an online platform to exchange secondhand products. It provides platforms for students to sell and buy second-hand (idle) things from each other. This website is launched as a descendant of the university site, that it does not sell or buy any products. Instead, users can publish the items they no longer need, or they want to buy on the website. No online transactions will be made via the platform, users are able to contact the corresponding buyer/seller for further information per methods provided by the publisher and are encouraged to check the items and finish the transaction by themselves. Univeristy students, professors and officers are targeting users of this website.
 <br/><br/>
