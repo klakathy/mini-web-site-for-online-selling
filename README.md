@@ -1,5 +1,5 @@
-# mini-web-site-for-online-selling
-*For online market website construction*  
+# Online selling website
+*A online-selling platform for second-hand items for students based on PHP and MySQL.*  
 ![add icon/screenshot](images/logo1.jpg)  
 <br/><br/>
 
@@ -15,8 +15,7 @@ The website can perform successfully through popular web browsers, Chrome, Firef
 ### Testing data
 The website is developed based on MySQL, sample data format can be seen in file [seep_sample.sql](seep_sample.sql). It currently has data of four simulated product for purchase or sell. Other testing data of the project are simulated randomly and are not stored in the database. 
 <br/>
-Key informations needed for the website contain the product description for each item posted for selling or wanting, users' account information and their saved favorite products, as well as the data recording new posted products. Here tables `itemlist`, `userlist`, `likelist`, `tmplist` are employed to utilized to serve the needs respectively.  
-![er model](readme_img/er1.png)  
+Key informations needed for the website contain the product description for each item posted for selling or wanting, users' account information and their saved favorite products, as well as the data recording new posted products. 
 Change of SQL platform may result to invalid SQL data format or failure of query functions on the website.
 <br/><br/>
 
